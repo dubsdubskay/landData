@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: landdata-modern-backend
+Version: 0.1.0
+Summary: FastAPI backend serving geodata and property listings for the modernized app.
+Requires-Python: >=3.10
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: pandas
+Requires-Dist: pydantic>=2.0
+Provides-Extra: geodata
+Requires-Dist: geopandas; extra == "geodata"
+Requires-Dist: pyogrio; extra == "geodata"

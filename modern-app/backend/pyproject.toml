@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "landdata-modern-backend"
+version = "0.1.0"
+description = "FastAPI backend serving geodata and property listings for the modernized app."
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pandas",
+  "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+geodata = [
+  "geopandas",
+  "pyogrio",
+]
+
+[tool.uvicorn]
+factory = false
+port = 8000
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app"]
