@@ -8,6 +8,7 @@ import { CountiesGeoJSON, Property, State } from "./types";
 import MapView from "./components/MapView";
 import PropertyGrid from "./components/PropertyGrid";
 import SelectedPropertiesList from "./components/SelectedPropertiesList";
+import kulzyLogo from "./images/Kulzy-Design-Logo2Gold.png";
 
 const countyLabel = (feature: any): string | undefined =>
   feature?.properties?.NAME ?? feature?.properties?.name;
@@ -134,12 +135,23 @@ export default function App() {
 
   return (
     <div className="app-shell">
+      <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+        <img
+          src={kulzyLogo}
+          alt="Kulzy Design"
+          style={{
+            maxWidth: "300px",
+            width: "100%",
+            height: "auto",
+          }}
+        />
+      </div>
+
       <header style={{ marginBottom: "1rem" }}>
         <p className="badge">Modernized</p>
         <h1 className="heading">Virginia Land Explorer</h1>
         <p className="subdued">
-          React + FastAPI version of the original Shiny app. Select a county, explore parcels, and
-          view them on the map with Kulzy-inspired styling.
+          Select a county, explore parcels, and view them on the map with Kulzy-inspired styling.
         </p>
       </header>
 
