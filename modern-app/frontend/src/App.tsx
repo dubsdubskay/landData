@@ -135,20 +135,23 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+      <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
         <img
           src={kulzyLogo}
           alt="Kulzy Design"
           style={{
-            maxWidth: "300px",
+            maxWidth: "180px",
             width: "100%",
             height: "auto",
           }}
         />
       </div>
 
-      <header style={{ marginBottom: "1rem" }}>
+      <div style={{ textAlign: "center", marginBottom: "1rem" }}>
         <p className="badge">Modernized</p>
+      </div>
+
+      <header style={{ marginBottom: "1rem", textAlign: "center" }}>
         <h1 className="heading">Virginia Land Explorer</h1>
         <p className="subdued">
           Select a county, explore parcels, and view them on the map with Kulzy-inspired styling.
